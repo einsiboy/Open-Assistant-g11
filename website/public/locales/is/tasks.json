@@ -1,0 +1,99 @@
+{
+  "any_feedback_on_this_task": "Einhverjar athugasemdir við þetta verkefni?",
+  "available_task_count": "{{count}} verkefni í boði",
+  "skip_confirmation": "Ertu viss um að þú viljir sleppa?",
+  "default": {
+    "unchanged_title": "Engar breytingar",
+    "unchanged_message": "Ertu viss um að þú viljir halda áfram?",
+    "continue_anyway": "Halda áfram samt",
+    "markdownguide": "Styling með markdown er stutt"
+  },
+  "no_more_tasks": "Svo virðist sem engin verkefni hafi fundist.",
+  "random": {
+    "label": "Ég er til í að prófa eitthvað nýtt",
+    "desc": "Hjálpaðu okkur að bæta Open Assistant með því að byrja á tilviljunarkenndu verkefni."
+  },
+  "create_initial_prompt": {
+    "label": "Búa til upphaflegar fyrirmæli",
+    "desc": "Skrifaðu upphaflegar fyrirmæli til að hjálpa Open Assistant að reyna að svara fjölbreyttum skilaboðum. (taka þátt í happdrætti)",
+    "overview": "Búðu til upphafleg skilaboð til að senda aðstoðarmanninum",
+    "instruction": "Skrifaðu upphaflegu fyrirmælin",
+    "response_placeholder": "Skrifaðu fyrirmælin þín hér...",
+    "shotcut_tip": "Ábending: Þú getur notað flýtivísanir til að yfirfara og senda inn svör:"
+  },
+  "reply_as_user": {
+    "label": "Svara sem notandi",
+    "desc": "Spjallaðu við Open Assistant og hjálpaðu til við að bæta svörin þess þegar þú hefur samskipti við það.",
+    "overview": "Gefðu viðeigandi svar miðað við eftirfarandi samtal",
+    "instruction": "Skrifaðu svar notandans",
+    "response_placeholder": "Skrifaðu svarið þitt hér...",
+    "shotcut_tip": "Ábending: Þú getur notað flýtivísanir til að yfirfara og senda inn svör:"
+  },
+  "reply_as_assistant": {
+    "label": "Svara sem aðstoðarmaður",
+    "desc": "Hjálpaðu Open Assistant að bæta svörin sín í samtölum við aðra notendur.",
+    "overview": "Gefðu viðeigandi svar miðað við eftirfarandi samtal",
+    "response_placeholder": "Skrifaðu svarið þitt hér...",
+    "shotcut_tip": "Ábending: Þú getur notað flýtivísanir til að yfirfara og senda inn svör:"
+  },
+  "rank_user_replies": {
+    "label": "Raða svörum notanda",
+    "desc": "Hjálpaðu Open Assistant að bæta svörin sín í samtölum við aðra notendur.",
+    "overview": "Miðað við eftirfarandi svör notanda, raðaðu þeim frá bestu til verstu, besta fyrst, versta síðast.",
+    "unchanged_title": "Röð óbreytt",
+    "unchanged_message": "Þú hefur ekki breytt röð fyrirmælanna. Ertu viss um að þú viljir halda áfram?",
+    "continue_anyway": "Halda áfram samt"
+  },
+  "rank_assistant_replies": {
+    "label": "Raða svörum aðstoðarmanns",
+    "desc": "Metið fyrirmæli gefin af Open Assistant út frá nákvæmni og læsileika.",
+    "overview": "Miðað við eftirfarandi svör aðstoðarmanns, raðaðu þeim frá bestu til verstu, besta fyrst, versta síðast.",
+    "unchanged_title": "Röð óbreytt",
+    "unchanged_message": "Þú hefur ekki breytt röð fyrirmælanna. Ertu viss um að þú viljir halda áfram?",
+    "continue_anyway": "Halda áfram samt"
+  },
+  "rank_initial_prompts": {
+    "label": "Raða upphaflegum fyrirmælum",
+    "desc": "Metið fyrirmæli gefin af Open Assistant út frá nákvæmni og læsileika.",
+    "overview": "Miðað við eftirfarandi upphafleg fyrirmæli, raðaðu þeim frá bestu til verstu, besta fyrst, versta síðast.",
+    "unchanged_title": "Röð óbreytt",
+    "unchanged_message": "Þú hefur ekki breytt röð fyrirmælanna. Ertu viss um að þú viljir halda áfram?",
+    "continue_anyway": "Halda áfram samt"
+  },
+  "label_initial_prompt": {
+    "label": "Merkja upphaflegt fyrirmæli",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Gefðu merki fyrir eftirfarandi fyrirmæli"
+  },
+  "label_prompter_reply": {
+    "label": "Merkja svar spyrjanda",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Miðað við eftirfarandi umræðu, gefðu merki fyrir loka fyrirmælið."
+  },
+  "label_assistant_reply": {
+    "label": "Merkja svar aðstoðarmanns",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Miðað við eftirfarandi umræðu, gefðu merki fyrir loka fyrirmælið."
+  },
+  "classify_initial_prompt": {
+    "label": "Flokka upphaflegt fyrirmæli",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Lestu eftirfarandi fyrirmæli og svaraðu síðan spurningunni um það."
+  },
+  "classify_prompter_reply": {
+    "label": "Flokka svar spyrjanda",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Lestu eftirfarandi samtal og svaraðu síðan spurningunni um síðasta svarið í umræðunni."
+  },
+  "classify_assistant_reply": {
+    "label": "Flokka svar aðstoðarmanns",
+    "desc": "Gefðu merki fyrir fyrirmæli.",
+    "overview": "Lestu eftirfarandi samtal og svaraðu síðan spurningunni um síðasta svarið í umræðunni."
+  },
+  "submitted_as": "Þetta verður sent inn sem {{submit_lang}}",
+  "tab_write": "Skrifa",
+  "tab_preview": "Forskoðun",
+  "writing_wrong_langauge_a_b": "Þú virðist vera að skrifa á {{detected_lang}} en þetta verður sent inn sem {{submit_lang}}.",
+  "not_rankable": "Öll svörin eru staðreyndavillur og ekki hægt að raða þeim",
+  "moderator_edit_explain": "Breyttu völdum skilaboðum en haltu breytingum í lágmarki. Þessi aðgerð getur valdið því að samtalið verði ekki í samræmi og einkunnir verði ekki lengur nákvæmar. Notaðu þetta varlega."
+}

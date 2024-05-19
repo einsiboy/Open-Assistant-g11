@@ -1,0 +1,21 @@
+{
+  "aborted_low_grade": "Hætt vegna lágs einkunnar",
+  "assistant": "Aðstoðarmaður",
+  "backlog_ranking": "Einkunnagjöf í bið",
+  "choose_a_language": "Veldu tungumál",
+  "count": "Fjöldi",
+  "growing": "Vaxandi",
+  "halted_by_moderator": "Stöðvað af stjórnanda",
+  "human_messages_by_lang": "Mannleg skilaboð eftir tungumáli",
+  "human_messages_by_role": "Mannleg skilaboð eftir hlutverki",
+  "initial_prompt_review": "Upphafleg yfirferð fyrirmæla",
+  "language_stats": "Tungumál",
+  "message_trees_by_state": "Skilaboðatré eftir stöðu",
+  "message_trees_states_by_lang": "Staða skilaboðatrjáa eftir tungumáli",
+  "prompt_lottery_waiting": "Bið eftir fyrirmæla happdrætti",
+  "prompter": "Spyrjandi",
+  "ranking": "Einkunnagjöf",
+  "ready_for_export": "Tilbúið til útflutnings",
+  "stats": "Tölfræði",
+  "users_accepted_tos": "Notendur samþykktu skilmála"
+}

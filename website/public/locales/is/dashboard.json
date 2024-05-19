@@ -1,0 +1,14 @@
+{
+  "grab_a_task": "Hjálpaðu við gagnasöfnun",
+  "create": "Búa til",
+  "evaluate": "Meta",
+  "label": "Merkja",
+  "dashboard": "Stjórnborð",
+  "go": "Fara",
+  "welcome_message": {
+    "label": "Velkomin/n, {{username}}!",
+    "contributor": "Framlagandi",
+    "description": "Open Assistant er opinn hugbúnaður sem notar og þjálfar háþróuð málmódel til að skilja og bregðast við mannlegum samskiptum.",
+    "instruction": "Ljúktu verkefnum til að hjálpa við þjálfun módelins og fáðu stig."
+  }
+}

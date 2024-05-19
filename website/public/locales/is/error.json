@@ -1,0 +1,16 @@
+{
+  "default": "Eitthvað fór úrskeiðis!",
+  "err_1000": "Ógild tegund verkefnis",
+  "err_1001": "Mistókst að viðurkenna verkefni",
+  "err_1002": "Mistókst að ekki viðurkenna verkefni",
+  "err_1003": "Ógild tegund svars",
+  "err_1004": "Beiðni um samskipti mistókst",
+  "err_1005": "Mistókst að búa til verkefni",
+  "err_1006": "Engin verkefni af tegundinni {{task_type}} eru nú í boði.",
+  "err_1007": "Fyrirspurn um framboð verkefna mistókst",
+  "err_1008": "Skilaboðin eru of löng",
+  "err_1009": "Nýleg skilaboð þín hafa afrit",
+  "err_1010": "Skilaboðatextinn er tómur",
+  "err_1011": "Þú getur ekki svarað tvisvar við sama skilaboðinu",
+  "err_1012": "Þú hefur of mörg óafgreidd verkefni. Vinsamlegast reyndu aftur eftir nokkrar mínútur."
+}

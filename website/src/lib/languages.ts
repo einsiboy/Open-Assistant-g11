@@ -7,6 +7,7 @@ const missingDisplayNamesForLocales = {
   eu: "Euskara",
   gl: "Galego",
   swg: "Schwäbisch",
+  is: "Íslenska",
 };
 
 /**

@@ -23,6 +23,7 @@ module.exports = {
       "hi",
       "hu",
       "id",
+      "is",
       "it",
       "ja",
       "ko",

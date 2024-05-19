@@ -1,0 +1,27 @@
+{
+  "blurb": "Við trúum því að við getum skapað byltingu.",
+  "blurb1": "Á sama hátt og Stable Diffusion hjálpaði heiminum að skapa list og myndir á nýja vegu, viljum við bæta heiminn með því að bjóða upp á ótrúlegt samtals AI.",
+  "chat_with_our_assistant": "Spjallaðu við aðstoðarmanninn okkar",
+  "description": "Samtals AI fyrir alla. Opið verkefni til að skapa spjallvirkt GPT LLM keyrt af LAION og framlagendum um allan heim.",
+  "faq_items": {
+    "q0": "Hversu langt er þetta verkefni komið?",
+    "a0": "Við erum á byrjunarstigi þróunar, vinnum út frá viðurkenndum rannsóknum um beitingu RLHF á stór málmódel.",
+    "q1": "Hver stendur á bak við Open Assistant?",
+    "a1": "Open Assistant er verkefni skipulagt af LAION og einstaklingum um allan heim sem hafa áhuga á að koma þessari tækni til allra.",
+    "q2": "Hvaða leyfi notar Open Assistant?",
+    "a2": "Kóðinn og módelin eru leyfð samkvæmt Apache 2.0 leyfinu.",
+    "q3": "Verður þjálfunargögnin einnig gefin út?",
+    "a3": "Já, undir CC BY 4.0 leyfinu.",
+    "q4": "Verður Open Assistant ókeypis?",
+    "a4": "Já, Open Assistant verður ókeypis til notkunar og breytinga.",
+    "q5": "Hvaða vélbúnaður þarf til að keyra módelin?",
+    "a5": "Það verða útgáfur sem hægt verður að keyra á heimilistölvum."
+  },
+  "faq_title": "Algengar spurningar",
+  "help_us_improve": "Hjálpaðu okkur að bæta okkur",
+  "hugging_face_link": "Kíktu á HuggingFace samtökin okkar",
+  "join_us_description": "Öll opinn hugbúnaðarverkefni byrja með fólki eins og þér. Opinn hugbúnaður er trúin á að ef við vinnum saman getum við saman gefið þekkingu okkar og tækni til heimsins til hagsbóta fyrir mannkynið. Ertu með? Finndu okkur hér:",
+  "join_us_title": "Taktu þátt með okkur",
+  "subtitle": "Samtals AI fyrir alla.",
+  "try_our_assistant": "Prófaðu aðstoðarmanninn okkar"
+}
