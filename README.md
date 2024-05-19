@@ -3,6 +3,39 @@
   <img width="auto" height="50px" src="https://github.com/LAION-AI/Open-Assistant/blob/main/assets/logo_crop.png"/>
 </h1>
 
+
+
+# Forked repo notes
+
+Entrypoint to start development
+*Note if on newer mac with M series chips put this in front of 
+the docker comopose command `DB_PLATFORM=linux/x86_64`
+```sh
+docker compose --profile frontend-dev up --build --attach-dependencies
+
+cd website
+Run npm ci  # ci for clean install - no need to run each time
+npx prisma db push  # run if remove/rebuilt containers
+npm run dev # start the web
+```
+
+Note that the profile `frontend-dev` also starts the backend, but just as a docker container.
+
+## i18n - Multiple language support
+The translations are done in the `website/public/locales` directory.  
+
+Also need to change the file `website/next-i18next.config.js` file 
+to add support for new languages.  
+
+Additionally for some languages need to modify 
+`website/src/lib/languages.ts` with the mapping of the 
+language code to the original lanuage string.  
+E.g.   {is: "Íslenska"}.  
+
+
+
+# Original Open-Assistant notes
+
 <blockquote>
 <p>:memo: <strong>NOTE</strong>: OpenAssistant is completed, and the project is now finished. Thank you to everyone who contributed! Check out our <a href="https://projects.laion.ai/Open-Assistant/blog/2023/10/25/open-assistant-is-completed">blog post</a> for more information. The final published oasst2 dataset can be found on HuggingFace at <a href="https://huggingface.co/datasets/OpenAssistant/oasst2">OpenAssistant/oasst2</a></p>
 </blockquote>
