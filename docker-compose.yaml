@@ -52,7 +52,7 @@ services:
 
   # This DB is for Web Authentication and data caching.
   webdb:
-    image: postgres
+    image: postgres:15
     restart: always
     profiles: ["frontend-dev", "ci", "inference-dev"]
     ports:
