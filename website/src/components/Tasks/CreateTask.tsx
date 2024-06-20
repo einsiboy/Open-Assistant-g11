@@ -42,6 +42,9 @@ export const CreateTask = ({
   const [isDesktop] = useMediaQuery("(min-width: 800px)");
 
   const textChangeHandler = (text: string) => {
+
+    console.log("textChangeHandler", text);
+
     onReplyChanged({ text });
     const isTextBlank = !text || /^\s*$/.test(text);
     if (!isTextBlank) {

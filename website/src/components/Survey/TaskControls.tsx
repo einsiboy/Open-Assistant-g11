@@ -7,6 +7,7 @@ import { TaskStatus } from "src/components/Tasks/Task";
 import { BaseTask } from "src/types/Task";
 
 import { SkipButton } from "../Buttons/Skip";
+import { ReferencesButton } from "../Buttons/References";
 
 export interface TaskControlsProps {
   task: BaseTask;
@@ -16,6 +17,7 @@ export interface TaskControlsProps {
   isRejecting: boolean;
   onEdit: () => void;
   onReview: () => void;
+  onGetReferences: () => void;
   onSubmit: () => void;
   onSkip: () => void;
 }
@@ -28,6 +30,7 @@ export const TaskControls = ({
   isSubmitting,
   onEdit,
   onReview,
+  onGetReferences,
   onSubmit,
   onSkip,
 }: TaskControlsProps) => {
@@ -41,6 +44,11 @@ export const TaskControls = ({
         <Flex width={["full", "fit-content"]} justify="center" ml="auto" gap={2}>
           {taskStatus.mode === "EDIT" ? (
             <>
+              <ReferencesButton 
+                onClick={onGetReferences}
+              >
+                {t("references")}
+              </ReferencesButton>
               <SkipButton
                 onSkip={onSkip}
                 confirmSkip={taskStatus.replyValidity === "VALID"}

@@ -12,9 +12,11 @@ from oasst_backend.api.v1 import (
     text_labels,
     trollboards,
     users,
+    references
 )
 
 api_router = APIRouter()
+api_router.include_router(references.router, prefix="/references", tags=["references"])
 api_router.include_router(tasks.router, prefix="/tasks", tags=["tasks"])
 api_router.include_router(text_labels.router, prefix="/text_labels", tags=["text_labels"])
 api_router.include_router(messages.router, prefix="/messages", tags=["messages"])

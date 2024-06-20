@@ -61,7 +61,19 @@ def request_task(
     request: protocol_schema.TaskRequest,
 ) -> Any:
     """
+    ORIGINAL DOCSTRING:
     Create new task.
+
+    ChatGPT GENERATED DOCSTRING:
+    Handles the creation of a new task based on a user's request, utilizing various
+    dependencies for rate limiting and authentication. It uses the provided session,
+    API key, and request data to process and potentially store a task using underlying
+    repository management.
+
+    :param db: Database session dependency injected by FastAPI.
+    :param api_key: API key for authentication, provided by the client.
+    :param request: Task request details provided by the client.
+    :return: The created task object as defined by the protocol schema.
     """
     api_client = deps.api_auth(api_key, db)
 
@@ -89,6 +101,21 @@ def tasks_availability(
     db: Session = Depends(deps.get_db),
     api_key: APIKey = Depends(deps.get_api_key),
 ):
+    """
+    ORIGINAL DOCSTRING:
+    Query task availability.
+
+    ChatGPT GENERATED DOCSTRING:
+    Queries and returns the availability of different task types for a given user and language.
+    This function uses authentication and session management to access and calculate task
+    availability through a series of repository and manager calls.
+
+    :param user: Optional; the user for whom the task availability is being checked.
+    :param lang: Optional; the language context for the task availability, defaults to English.
+    :param db: Database session dependency injected by FastAPI.
+    :param api_key: API key for authentication, provided by the client.
+    :return: Dictionary of task types and their respective availability counts.
+    """
     api_client = deps.api_auth(api_key, db)
 
     try:
@@ -113,9 +140,20 @@ def tasks_acknowledge(
     ack_request: protocol_schema.TaskAck,
 ) -> None:
     """
+    ORIGINAL DOCSTRING:
     The frontend acknowledges a task.
-    """
 
+    ChatGPT GENERATED DOCSTRING:
+    Processes an acknowledgment for a completed task by binding the task ID to a frontend message ID
+    within the database. Utilizes the provided session, API key, and task data for the operation,
+    while logging the acknowledgment for system tracing.
+
+    :param db: Database session dependency injected by FastAPI.
+    :param api_key: API key for authentication, provided by the client.
+    :param frontend_user: Frontend user ID that correlates to the user making the acknowledgment.
+    :param task_id: Unique identifier for the task being acknowledged.
+    :param ack_request: Contains details about the acknowledgment from the frontend.
+    """
     api_client = deps.api_auth(api_key, db)
 
     try:
@@ -143,9 +181,20 @@ def tasks_acknowledge_failure(
     nack_request: protocol_schema.TaskNAck,
 ) -> None:
     """
+    ORIGINAL DOCSTRING:
     The frontend reports failure to implement a task.
-    """
 
+    ChatGPT GENERATED DOCSTRING:
+    Handles the report of a failed task implementation, marking the task as skipped with a reason.
+    This involves logging the failure and updating the task status within the database based on
+    the provided session, API key, and task data.
+
+    :param db: Database session dependency injected by FastAPI.
+    :param api_key: API key for authentication, provided by the client.
+    :param frontend_user: Frontend user ID that correlates to the user reporting the failure.
+    :param task_id: Unique identifier for the task that failed.
+    :param nack_request: Contains details about the failure, including the reason for the failure.
+    """
     try:
         logger.info(f"Frontend reports failure to implement task {task_id=}, {nack_request=}.")
         api_client = deps.api_auth(api_key, db)
@@ -163,7 +212,17 @@ async def tasks_interaction(
     interaction: protocol_schema.AnyInteraction,
 ) -> Any:
     """
+    ORIGINAL DOCSTRING:
     The frontend reports an interaction.
+
+    ChatGPT GENERATED DOCSTRING:
+    Processes a user interaction reported from the frontend, potentially concluding with
+    a task completion. This asynchronous function manages the transaction of handling the
+    interaction, updating user activity, and returning the resultant task state.
+
+    :param api_key: API key for authentication, provided by the client.
+    :param interaction: Details of the user interaction that needs to be processed.
+    :return: The final state of the task after processing the interaction.
     """
 
     @async_managed_tx_function(CommitMode.COMMIT)
@@ -192,6 +251,19 @@ def close_collective_task(
     db: Session = Depends(deps.get_db),
     api_key: APIKey = Depends(deps.get_api_key),
 ):
+    """
+    ORIGINAL DOCSTRING:
+    Close a task as complete.
+
+    ChatGPT GENERATED DOCSTRING:
+    Marks a collective task as completed based on the request, using session management
+    and authentication. It updates the task's status in the database to reflect its closure.
+
+    :param close_task_request: Contains details of the task to be closed.
+    :param db: Database session dependency injected by FastAPI.
+    :param api_key: API key for authentication, provided by the client.
+    :return: Confirmation of the task closure represented by a `TaskDone` schema.
+    """
     api_client = deps.api_auth(api_key, db)
     tr = TaskRepository(db, api_client)
     tr.close_task(close_task_request.message_id)

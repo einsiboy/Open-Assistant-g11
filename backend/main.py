@@ -31,6 +31,7 @@ from prometheus_fastapi_instrumentator import Instrumentator
 from pydantic import BaseModel
 from sqlmodel import Session
 from starlette.middleware.cors import CORSMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
 
 app = fastapi.FastAPI(title=settings.PROJECT_NAME, openapi_url=f"{settings.API_V1_STR}/openapi.json")
 startup_time: datetime = utcnow()
@@ -67,6 +68,20 @@ if settings.BACKEND_CORS_ORIGINS:
         allow_methods=["*"],
         allow_headers=["*"],
     )
+
+
+
+# ====== set logging middleware for all requests ======
+middleware_logger = logger.bind()  
+
+class LogRequestMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request: fastapi.Request, call_next):
+        middleware_logger.opt(colors=True).info(f"<magenta> --- Route called:</magenta> <bold>{request.method} {request.url.path}</bold>")
+        response = await call_next(request)
+        return response    
+    
+app.add_middleware(LogRequestMiddleware)
+
 
 if settings.UPDATE_ALEMBIC:
 

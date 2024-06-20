@@ -87,7 +87,10 @@ class OasstErrorCode(IntEnum):
 
     EMOJI_OP_UNSUPPORTED = 5000
 
+    # 6000-7000: other
     CACHED_STATS_NOT_AVAILABLE = 6000
+    FAILED_REFERENCEC_FETCH = 7000
+
 
 
 class OasstError(Exception):

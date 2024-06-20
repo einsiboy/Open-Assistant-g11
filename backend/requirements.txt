@@ -11,6 +11,7 @@ numpy>=1.23.2
 prometheus-fastapi-instrumentator==5.9.1
 psycopg2-binary==2.9.5
 pydantic==1.10.7
+# pip install pydantic==1.8.2
 pydantic[email]==1.10.7
 python-dotenv==0.21.0
 python-jose[cryptography]==3.3.0
@@ -22,3 +23,7 @@ sqlmodel==0.0.8
 tqdm>=4.64.1
 uuid7==0.1.0
 uvicorn==0.20.0
+
+# 
+sentence-transformers==3.0.1
+faiss-cpu==1.8.0

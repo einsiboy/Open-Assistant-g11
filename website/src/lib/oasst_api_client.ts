@@ -428,6 +428,10 @@ export class OasstApiClient {
     return this.get(`/api/v1/users/${backendUser.user_id}/stats`);
   }
 
+  async fetchReferences(query: string, lang: string) {
+    return this.get(`/api/v1/references?query=${query}&lang=${lang}`);
+  }
+
   fetch_user_stats_window(user_id: string, time_frame: LeaderboardTimeFrame, window_size?: number) {
     return this.get<LeaderboardReply>(`/api/v1/users/${user_id}/stats/${time_frame}/window`, {
       window_size,

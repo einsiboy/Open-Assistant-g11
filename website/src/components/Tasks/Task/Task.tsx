@@ -12,6 +12,7 @@ import { getTypeSafei18nKey } from "src/lib/i18n";
 import { OasstError } from "src/lib/oasst_api_client";
 import { BaseTask, TaskCategory, TaskContent, TaskInfo, TaskReplyValidity } from "src/types/Task";
 import { CreateTaskType, LabelTaskType, RankTaskType } from "src/types/Tasks";
+import { useReferences } from "src/hooks/references/useReferences";
 
 interface EditMode {
   mode: "EDIT";
@@ -113,6 +114,15 @@ export const Task = () => {
     { mode: "EDIT", replyValidity: "INVALID" }
   );
 
+  const { references, isLoading: citationsLoading, isError, refreshReferences } = useReferences(replyContent.current?.text || "");
+
+  const handleFetchReferences = () => {
+    const query = replyContent.current?.text || "";
+    console.log("handleFetchReferences, query: ", query);
+    refreshReferences(); 
+    console.log("handleFetchReferences", {references})
+  };
+
   const updateValidity = useCallback(
     (replyValidity: TaskReplyValidity) => taskEvent({ action: "UPDATE_VALIDITY", replyValidity }),
     [taskEvent]
@@ -125,6 +135,8 @@ export const Task = () => {
 
   const onReplyChanged = useCallback(
     (content: TaskContent) => {
+      console.log("-- onReplyChanged, content: ", content);
+
       replyContent.current = content;
     },
     [replyContent]
@@ -219,6 +231,7 @@ export const Task = () => {
         onReview={() => taskEvent({ action: "REVIEW" })}
         onSubmit={submitResponse}
         onSkip={rejectTask}
+        onGetReferences={handleFetchReferences}
       />
       <UnchangedWarning
         show={taskStatus.mode === "DEFAULT_WARN"}
