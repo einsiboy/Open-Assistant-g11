@@ -1,11 +1,11 @@
 {
-  "delete_account": "Eyða reikningi mínum",
-  "delete_account_data": "Öll gögn sem lagt er af mörkum til Open Assistant með því að leysa verkefni, raða skilaboðum og öll samtöl sem farið hafa fram með spjallþjónustunni, verða geymd. Hins vegar verða allar tilvísanir í upprunalega notandann gerðar nafnlausar.",
+  "delete_account": "Eyða reikningnum mínum",
+  "delete_account_data": "Öll gögn sem lögð eru til Open Assistant með því að leysa verkefni, raða skilaboðum og öll samtöl sem höfð eru með spjallþjónustunni, verða geymd. Hins vegar eru allar tilvísanir í upprunalega notandann gerðar nafnlausar.",
   "delete_account_intro": "Að eyða reikningi felur í sér eftirfarandi:",
   "delete_account_leaderboard": "Reikningar eyddra notenda munu ekki birtast á stigatöflunni",
-  "delete_account_permanent": "Þessi aðgerð er varanleg og getur ekki verið afturkölluð",
-  "edit_paper_ack": "Breyta viðurkenningu í grein",
+  "delete_account_permanent": "Þessi aðgerð er varanleg og ekki er hægt að afturkalla hana",
+  "edit_paper_ack": "Breyta viðurkenningu í grein sem skrifuð verður um málheildina",
   "go_to_dashboard": "Fara aftur á stjórnborð",
   "linked_accounts": "Tengdir reikningar",
-  "yes_delete": "Já, eyða reikningi mínum varanlega"
+  "yes_delete": "Já, eyða reikningnum mínum varanlega"
 }
