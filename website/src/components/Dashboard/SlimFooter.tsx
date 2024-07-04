@@ -20,9 +20,9 @@ export function SlimFooter() {
             <FooterLink href="/privacy-policy" label={t("privacy_policy")} />
             <FooterLink href="/terms-of-service" label={t("terms_of_service")} />
             <FooterLink href="/team" label={t("team")} />
-            <FooterLink href="https://github.com/LAION-AI/Open-Assistant" label={t("github")} />
-            <FooterLink href="https://huggingface.co/OpenAssistant" label={t("hugging_face")} />
-            <FooterLink href="https://ykilcher.com/open-assistant-discord" label={t("discord")} />
+            <FooterLink href="https://github.com/einsiboy/Open-Assistant-g11" label={t("github")} />
+            <FooterLink href="https://trustllm.eu/" label="Website" />
+            <FooterLink href="https://discord.gg/8uSj4k8E" label={t("discord")} />
             <FooterLink href="https://projects.laion.ai/Open-Assistant/" label={t("docs")} />
             <FooterLink href="https://projects.laion.ai/Open-Assistant/docs/faq" label={t("faq")} />
           </Box>

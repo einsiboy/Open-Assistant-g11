@@ -56,15 +56,15 @@ export function Footer() {
                 <Text fontWeight="bold" color={textColor}>
                   {t("connect")}
                 </Text>
-                <FooterLink href="https://github.com/LAION-AI/Open-Assistant" label={t("github")} />
-                <FooterLink href="https://ykilcher.com/open-assistant-discord" label={t("discord")} />
+                <FooterLink href="https://github.com/einsiboy/Open-Assistant-g11" label={t("github")} />
+                <FooterLink href="https://discord.gg/Mz5TStSr" label={t("discord")} />
                 <FooterLink href="https://huggingface.co/OpenAssistant" label={t("hugging_face")} />
               </Flex>
               <Flex direction="column" alignItems={["center", "start"]}>
                 <Text fontWeight="bold" color={textColor}>
                   {t("about")}
                 </Text>
-                <FooterLink href="/team" label={t("who_are_we")} />
+                <FooterLink href="https://trustllm.eu/" label="Website" />
                 <FooterLink href="https://projects.laion.ai/Open-Assistant" label={t("docs")} />
                 <FooterLink href="https://projects.laion.ai/Open-Assistant/docs/faq" label={t("faq")} />
               </Flex>

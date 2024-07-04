@@ -68,7 +68,7 @@ export function CallToAction() {
           </Text>
 
           <Box className="mt-8 flex justify-center" gap={["2", "4"]}>
-            <Link href="https://ykilcher.com/open-assistant-discord" rel="noreferrer" target="_blank">
+            <Link href="https://discord.gg/8uSj4k8E" rel="noreferrer" target="_blank">
               <button
                 type="button"
                 className="mb-2 flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -79,7 +79,7 @@ export function CallToAction() {
                 </Text>
               </button>
             </Link>
-            <Link href="https://github.com/LAION-AI/Open-Assistant" rel="noreferrer" target="_blank">
+            <Link href="https://github.com/einsiboy/Open-Assistant-g11" rel="noreferrer" target="_blank">
               <button
                 type="button"
                 className="mb-2 flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -90,7 +90,7 @@ export function CallToAction() {
                 </Text>
               </button>
             </Link>
-            <Link href="/team" rel="noreferrer" target="_blank">
+            <Link href="https://trustllm.eu/partners/" rel="noreferrer" target="_blank">
               <button
                 type="button"
                 className="mb-2 flex items-center rounded-md border border-transparent bg-blue-600 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"

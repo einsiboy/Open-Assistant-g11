@@ -10,7 +10,7 @@
   "chat": "Chat",
   "confirm": "Confirm",
   "connect": "Connect",
-  "conversational": "Conversational AI for everyone.",
+  "conversational": "Democratising trustworthy and factual large language model technology for Europe.",
   "copied": "Copied",
   "copy": "Copy",
   "create_chat": "Create a new chat",
@@ -56,7 +56,7 @@
   "submit_your_answer": "Submit your answer",
   "submit": "Submit",
   "success": "Success",
-  "team_message": "Open Assistant is only possible through the efforts of these amazing people",
+  "team_message": "TrustLLM is only possible through the efforts of these amazing people",
   "team": "Team",
   "terms_of_service": "Terms of Service",
   "title": "Open Assistant",
@@ -65,6 +65,6 @@
   "user_leaderboard": "User Leaderboard",
   "users_dashboard": "Users Dashboard",
   "users": "Users",
-  "who_are_we": "Who are we?",
+  "Website": "Who are we?",
   "yes": "Yes"
 }
