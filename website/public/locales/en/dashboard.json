@@ -8,7 +8,7 @@
   "welcome_message": {
     "label": "Welcome, {{username}}!",
     "contributor": "Contributor",
-    "description": "Open Assistant is an open-source AI assistant that uses and trains advanced language models to understand and respond to humans.",
-    "instruction": "Complete tasks to help train the model and earn points."
+    "description": "The TrustLLM project is developing open, trustworthy and factual large language models, initially targeting the Germanic languages. This dataset will be used for instruction fine-tuning, RLHF and DPO of an open-source Germanic LLM.",
+    "instruction": "Complete tasks to contribute to the dataset and earn points."
   }
 }

@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next";
 
 import { Container } from "./Container";
 
-const FAQS = Array.from({ length: 6 });
+const FAQS = Array.from({ length: 5 });
 
 export function Faq() {
   const { colorMode } = useColorMode();
