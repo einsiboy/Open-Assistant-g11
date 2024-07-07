@@ -11,6 +11,7 @@ from loguru import logger
 from oasst_backend.config import settings
 from oasst_backend.database import engine
 from oasst_backend.models import ApiClient
+from oasst_backend.vector_database import milvus
 from oasst_shared.exceptions import OasstError, OasstErrorCode
 from sqlmodel import Session
 
@@ -19,6 +20,8 @@ def get_db() -> Generator:
     with Session(engine) as db:
         yield db
 
+def get_vector_db():
+    return milvus
 
 api_key_query = APIKeyQuery(name="api_key", scheme_name="api-key", auto_error=False)
 api_key_header = APIKeyHeader(name="X-API-Key", scheme_name="api-key", auto_error=False)

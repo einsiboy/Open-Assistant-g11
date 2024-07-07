@@ -31,6 +31,7 @@ TEXT_SEARCH_LANGUAGE_MAPPING: dict[str, str] = {
     "hi": "hindi",
     "hu": "hungarian",
     "id": "indonesian",
+    "is": "icelandic",
     "it": "italian",
     "lt": "lithuanian",
     "ne": "nepali",

@@ -1,19 +1,34 @@
-import useSWR from 'swr';
-import { get } from 'src/lib/api';  // Import get from your API utilities
+import { useState, useCallback } from 'react';
+import { get } from 'src/lib/api';
 import { useCurrentLocale } from 'src/hooks/locale/useCurrentLocale';
+import { API_ROUTES } from 'src/lib/routes';
 
-export function useReferences(query) {
+export function useReferences() {
+  const [references, setReferences] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
   const locale = useCurrentLocale();
 
-  // TODO move url to routes.ts
-  const { data, error, isValidating, mutate } = useSWR(query ? `/api/references?query=${query}&lang=${locale}` : null, get, { shouldRetryOnError: false });
+  const fetchReferences = useCallback(async (query) => {
+    if (!query) return;
 
-  console.log("using useReferences, query is: ", query);
-  
+    setIsLoading(true);
+    setError(null);
+
+    try {
+      const data = await get(API_ROUTES.GET_REFERENCES(query, locale));
+      setReferences(data);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [locale]);
+
   return {
-    references: data,
-    isLoading: isValidating,
-    isError: error,
-    refreshReferences: mutate,  // Allows manual revalidation
+    references,
+    isLoading,
+    error,
+    fetchReferences,
   };
 }

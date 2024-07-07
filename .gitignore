@@ -26,3 +26,15 @@ backend/openapi.json
 
 # JetBrains PyCharm:
 .idea/
+
+start_attu.sh
+start_backend.sh
+start_frontend.sh
+start_both.sh
+stop_all_containers.sh
+stop_frontend.sh
+.env.bak
+
+volumes/etcd/*
+volumes/milvus/*
+volumes/minio/*

@@ -114,14 +114,21 @@ export const Task = () => {
     { mode: "EDIT", replyValidity: "INVALID" }
   );
 
-  const { references, isLoading: citationsLoading, isError, refreshReferences } = useReferences(replyContent.current?.text || "");
+  const { references, isLoading: citationsLoading, error, fetchReferences } = useReferences();
 
-  const handleFetchReferences = () => {
+  const handleGetReferences = () => {
     const query = replyContent.current?.text || "";
-    console.log("handleFetchReferences, query: ", query);
-    refreshReferences(); 
-    console.log("handleFetchReferences", {references})
+    fetchReferences(query);
   };
+  
+  useEffect(() => {
+    console.log("Task references updated", {references});
+  }, [references]);
+
+  useEffect(() => {
+    // TODO: remove once we have a proper error handling (once we implement UI for references), just keep to show we do get the correct OasstError
+    console.log("Task references error", {error});
+  }, [error]);
 
   const updateValidity = useCallback(
     (replyValidity: TaskReplyValidity) => taskEvent({ action: "UPDATE_VALIDITY", replyValidity }),
@@ -231,8 +238,8 @@ export const Task = () => {
         onReview={() => taskEvent({ action: "REVIEW" })}
         onSubmit={submitResponse}
         onSkip={rejectTask}
-        onGetReferences={handleFetchReferences}
-      />
+        onGetReferences={handleGetReferences}
+        />
       <UnchangedWarning
         show={taskStatus.mode === "DEFAULT_WARN"}
         title={t(getTypeSafei18nKey(`${taskInfo.id}.unchanged_title`), t("default.unchanged_title"))}

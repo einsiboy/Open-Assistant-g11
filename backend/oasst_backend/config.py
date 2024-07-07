@@ -183,6 +183,9 @@ class Settings(BaseSettings):
     DATABASE_URI: Optional[PostgresDsn] = None
     DATABASE_MAX_TX_RETRY_COUNT: int = 3
 
+    MILVUS_HOST: str = "localhost"
+    MILVUS_PORT: int = 19530
+
     DATABASE_POOL_SIZE = 75
     DATABASE_MAX_OVERFLOW = 20
 

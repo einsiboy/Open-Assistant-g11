@@ -68,4 +68,7 @@ export const API_ROUTES = {
   UPDATE_CHAT: () => `/api/chat`,
   GET_PLUGIN_CONFIG: `/api/chat/plugin_config`,
   DELETE_CHAT: (chat_id: string) => createRoute(`/api/chat`, { chat_id }),
+  GET_REFERENCES: (query: string, lang: string) => 
+    createRoute(`/api/references`, { query, lang })
 };
+// /api/references?query=${query}&lang=${locale}`
